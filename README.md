@@ -35,10 +35,16 @@ BS_SIZE=16k  # size
 <code>./clone-copy-bootable-usb.sh</code>
 
 6. Check to see if the ISO has been created at your specified backup location.
+It should have been created as TODAYS-DATE.xigmanas.usb-backup.iso
 
 7. Burn the ISO to another USB Drive.
+You can use DD or a program Balena Etcher to do this.
 
 8. Make sure the newly created USB Drive boots properly
+Shutdown your server and remove the USB Boot Stick and replace it with your newly created bootable USB Stick.   Startup your NAS and it should work the same as before.
 
 9. Setup a cronjob to run the script daily/weekly if you choose.
-
+Once you have determined your Backup USB stick works simply create a cronjob to run the script daily or weekly.  See e.g. below
+<pre>
+5 1   * * * /etc/rsync.server.ssh.key.sh >/dev/null 2>&1
+</pre>
