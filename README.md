@@ -1,8 +1,6 @@
 # clone-copy-bootable-usb
-This is a shell script that will allow 
-
 This script was initially designed backing up the USB boot drive for a Xigmanas server.
-However it can be used for any bootable UNIX/LINUX/ FreeBSD type server
+However it can be used for any bootable UNIX/LINUX/ FreeBSD type server.
 
 # Usage:
 
@@ -12,7 +10,7 @@ However it can be used for any bootable UNIX/LINUX/ FreeBSD type server
 
 <code>sudo -i</code>
 
-3. Download the installer script.
+3. Download the clone-copy-bootable-usb.sh shell script.
 
 <code>wget https://raw.githubusercontent.com/clusterednetworks/clone-copy-bootable-usb/master/clone-copy-bootable-usb.sh</code>
 
@@ -20,7 +18,17 @@ However it can be used for any bootable UNIX/LINUX/ FreeBSD type server
 
 <code>chmod +x clone-copy-bootable-usb.sh</code>
 
-5. Edit the script to your environment
+5. Edit the script to your environment.
+<code>
+ <pre>
+ # Edit to suit your environment and options
+DAYS_TO_KEEP=4    # 0 to keep forever
+BOOT_USB=/dev/da0  # path to your USB device
+BACKUP_USB=/dev/da1 # backup USB device
+BACKUP_PATH=/mnt/Pool2/backup # backup path to create iso file
+BS_SIZE=16k  # size 
+  </pre>
+  </code>
 
 6. Run the script.
 
