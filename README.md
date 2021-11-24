@@ -46,5 +46,5 @@ Shutdown your server and remove the USB Boot Stick and replace it with your newl
 9. Setup a cronjob to run the script daily/weekly if you choose.
 Once you have determined your Backup USB stick works simply create a cronjob to run the script daily or weekly.  See e.g. below
 <pre>
-5 1   * * * /etc/rsync.server.ssh.key.sh >/dev/null 2>&1
+5 1   * * * /etc/clone-copy-bootable-usb.sh >/dev/null 2>&1
 </pre>
