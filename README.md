@@ -7,8 +7,9 @@ However it can be used for any bootable UNIX/LINUX/ FreeBSD type server.
 1. Pull up a terminal or SSH into the target server (e.g. xigmanas).
 
 2. Logon as root
-
-<code>sudo -i</code>
+<pre>
+sudo -i
+</pre>
 
 3. Download the clone-copy-bootable-usb.sh shell script.
 
@@ -19,7 +20,6 @@ However it can be used for any bootable UNIX/LINUX/ FreeBSD type server.
 <code>chmod +x clone-copy-bootable-usb.sh</code>
 
 5. Edit the script to your environment.
-<code>
  <pre>
  # Edit to suit your environment and options
 DAYS_TO_KEEP=4    # 0 to keep forever
@@ -28,11 +28,12 @@ BACKUP_USB=/dev/da1 # backup USB device
 BACKUP_PATH=/mnt/Pool2/backup # backup path to create iso file
 BS_SIZE=16k  # size 
   </pre>
-  </code>
 
 6. Run the script.
 
-<code>./clone-copy-bootable-usb.sh</code>
+<pre>
+./clone-copy-bootable-usb.sh
+</pre>
 
 6. Check to see if the ISO has been created at your specified backup location.
 It should have been created as TODAYS-DATE.xigmanas.usb-backup.iso
